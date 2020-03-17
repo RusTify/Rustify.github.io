@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-     潮汐
+     
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -32,7 +32,7 @@ var _hmt = _hmt || [];
 </script>
 
 
-<link rel="alternate" href="/atom.xml" title="潮汐" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="null" type="application/atom+xml">
 </head>
 
 </html>
@@ -45,10 +45,10 @@ var _hmt = _hmt || [];
     
   <div class="cover-frame">
     <div class="bg-box">
-      <img src="/images/cover1.jpg" alt="image frame" />
+      <img src="/images/cover4.jpg" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
-      <h1><a href="/">潮汐</a></h1>
+      <h1><a href="/"></a></h1>
       <div id="subtitle-box">
         
         <span id="subtitle"></span>
@@ -75,7 +75,7 @@ var _hmt = _hmt || [];
     
     
     
-    <article id="post-ddd" class="article article-type-post" itemscope
+    <article id="post-20.3.16" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -83,8 +83,8 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/03/16/ddd/"
-    >【每日一题】2020/3/16 第一周</a
+  <a class="article-title" href="/2020/03/16/20.3.16/"
+    >【LeetCode】2020/3/16</a
   >
 </h2>
   
@@ -94,12 +94,12 @@ var _hmt = _hmt || [];
 
     
     <div class="article-meta">
-      <a href="/2020/03/16/ddd/" class="article-date">
-  <time datetime="2020-03-16T14:58:40.000Z" itemprop="datePublished">2020-03-16</time>
+      <a href="/2020/03/16/20.3.16/" class="article-date">
+  <time datetime="2020-03-16T14:58:20.000Z" itemprop="datePublished">2020-03-16</time>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a>
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
   </div>
 
       
@@ -131,7 +131,240 @@ var _hmt = _hmt || [];
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" rel="tag">每日一题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-20.1.3" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/01/03/20.1.3/"
+    >【LeetCode】2020/1/3</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/03/20.1.3/" class="article-date">
+  <time datetime="2020-01-03T13:11:18.000Z" itemprop="datePublished">2020-01-03</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="20-有效括号"><a href="#20-有效括号" class="headerlink" title="20 有效括号"></a>20 有效括号</h1><ul>
+<li>暴力求解，遍历字符串，内建库</li>
+</ul>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">isValid</span><span class="params">(s <span class="keyword">string</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> strings.Contains(s,<span class="string">"&#123;&#125;"</span>)||strings.Contains(s,<span class="string">"[]"</span>)||strings.Contains(s,<span class="string">"()"</span>)&#123;</span><br><span class="line">        s = strings.Replace(s, <span class="string">"&#123;&#125;"</span>, <span class="string">""</span>, <span class="number">-1</span>)</span><br><span class="line">        s = strings.Replace(s, <span class="string">"[]"</span>, <span class="string">""</span>, <span class="number">-1</span>)</span><br><span class="line">        s = strings.Replace(s, <span class="string">"()"</span>, <span class="string">""</span>, <span class="number">-1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> s!=<span class="string">""</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>栈</li>
+</ul>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isValid</span><span class="params">(s <span class="keyword">string</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">    stack :=NewStack()</span><br><span class="line">    <span class="keyword">for</span> _,v :=<span class="keyword">range</span> s&#123;</span><br><span class="line">        <span class="keyword">if</span> v ==<span class="string">'&#123;'</span>||v==<span class="string">'('</span>||v==<span class="string">'['</span>&#123;</span><br><span class="line">            stack.Push(v)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>  v==<span class="string">'&#125;'</span>&#123;</span><br><span class="line">            <span class="keyword">if</span> stack.Peak()==<span class="string">'&#123;'</span>&#123;</span><br><span class="line">                stack.Pop()</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">          <span class="keyword">if</span>  v==<span class="string">')'</span>&#123;</span><br><span class="line">            <span class="keyword">if</span> stack.Peak()==<span class="string">'('</span>&#123;</span><br><span class="line">                stack.Pop()</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">          <span class="keyword">if</span>  v==<span class="string">']'</span>&#123;</span><br><span class="line">            <span class="keyword">if</span> stack.Peak()==<span class="string">'['</span>&#123;</span><br><span class="line">                stack.Pop()</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> stack.Empty()&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">\\栈的实现</span><br><span class="line"><span class="keyword">package</span> stack</span><br><span class="line"><span class="keyword">import</span> <span class="string">"container/list"</span></span><br><span class="line"><span class="keyword">type</span> Stack <span class="keyword">struct</span> &#123;</span><br><span class="line">    list *list.List</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewStack</span><span class="params">()</span> *<span class="title">Stack</span></span> &#123;</span><br><span class="line">    list := list.New()</span><br><span class="line">    <span class="keyword">return</span> &amp;Stack&#123;list&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(stack *Stack)</span> <span class="title">Push</span><span class="params">(value <span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">    stack.list.PushBack(value)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(stack *Stack)</span> <span class="title">Pop</span><span class="params">()</span> <span class="title">interface</span></span>&#123;&#125; &#123;</span><br><span class="line">    e := stack.list.Back()</span><br><span class="line">    <span class="keyword">if</span> e != <span class="literal">nil</span> &#123;</span><br><span class="line">        stack.list.Remove(e)</span><br><span class="line">        <span class="keyword">return</span> e.Value</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(stack *Stack)</span> <span class="title">Peak</span><span class="params">()</span> <span class="title">interface</span></span>&#123;&#125; &#123;</span><br><span class="line">    e := stack.list.Back()</span><br><span class="line">    <span class="keyword">if</span> e != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> e.Value</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(stack *Stack)</span> <span class="title">Len</span><span class="params">()</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> stack.list.Len()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(stack *Stack)</span> <span class="title">Empty</span><span class="params">()</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> stack.list.Len() == <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-19.12.21" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/12/21/19.12.21/"
+    >【LeetCode】2019/12/21</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/12/21/19.12.21/" class="article-date">
+  <time datetime="2019-12-21T12:01:18.000Z" itemprop="datePublished">2019-12-21</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="26-删除排序数组中的重复项"><a href="#26-删除排序数组中的重复项" class="headerlink" title="26. 删除排序数组中的重复项"></a>26. 删除排序数组中的重复项</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。<br>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</p>
+<p>给定 nums = [0,0,1,1,1,2,2,3,3,4],<br>函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。<br>你不需要考虑数组中超出新长度后面的元素。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>拿到题目的时候首先确定题意，分析清楚输入和输出。<br>考虑可以使用的方法，对于数组来说，同一个数组可以有多个指针，只要互不影响，就ok</p>
+<p>首先返回的新数组中元素的个数 = 数组长度<br>因为是连续存储所以你只需要指向最有一个元素即可<br>需要几个变量？ 变量之间是否有相关性？</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">removeDuplicates</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> i <span class="keyword">int</span></span><br><span class="line">    <span class="keyword">for</span> _,v := <span class="keyword">range</span> nums&#123;</span><br><span class="line">        <span class="keyword">if</span> nums[i]!=v&#123;</span><br><span class="line">            i++</span><br><span class="line">            nums[i]=v</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> i+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="189">
+<li>旋转数组<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">     <span class="function"><span class="keyword">func</span> <span class="title">rotate</span><span class="params">(nums []<span class="keyword">int</span>, k <span class="keyword">int</span>)</span></span>  &#123;</span><br><span class="line"></span><br><span class="line">        k = k%<span class="built_in">len</span>(nums)<span class="comment">//注意k值超出数组长度的时候，取余</span></span><br><span class="line">        nums1 := nums[<span class="number">0</span>:<span class="built_in">len</span>(nums)-k]</span><br><span class="line">        nums2 := nums[<span class="built_in">len</span>(nums)-k:<span class="built_in">len</span>(nums)]</span><br><span class="line">        reverse(nums1)</span><br><span class="line">        reverse(nums2)</span><br><span class="line">        reverse(nums)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reverse</span> <span class="params">(nums []<span class="keyword">int</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> i:=<span class="number">0</span>; i&lt; <span class="built_in">len</span>(nums)/<span class="number">2</span>;i++&#123;</span><br><span class="line">        nums[i],nums[<span class="built_in">len</span>(nums)-i<span class="number">-1</span>] = nums[<span class="built_in">len</span>(nums)-i<span class="number">-1</span>],nums[i]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-19.12.10" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/12/10/19.12.10/"
+    >【LeetCode】2019/12/10</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/12/10/19.12.10/" class="article-date">
+  <time datetime="2019-12-10T10:48:40.000Z" itemprop="datePublished">2019-12-10</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="11-盛水最多的容器"><a href="#11-盛水最多的容器" class="headerlink" title="11\盛水最多的容器"></a>11\盛水最多的容器</h1><h2 id="双指针，关于解算法题的思考，求解问题。计算思维"><a href="#双指针，关于解算法题的思考，求解问题。计算思维" class="headerlink" title="双指针，关于解算法题的思考，求解问题。计算思维"></a>双指针，关于解算法题的思考，求解问题。计算思维</h2><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">全部的解空间为C(2,n)，无序对。</span></span><br><span class="line"><span class="comment">1、确保覆盖全部解空间，确保每次丢掉的解空间一定小于等于最优解,你觉得没考虑的情况实际上已经才一次操作后考虑过了</span></span><br><span class="line"><span class="comment">2、考虑MaxArea = min(height[j]，height[i])*(j-i),往内收缩的时候丢掉的解集，一定小于当前的解</span></span><br><span class="line"><span class="comment">因为解集的大小取决于高度最小的一个</span></span><br><span class="line"><span class="comment">**/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">maxArea</span><span class="params">(height []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">var</span> j = <span class="built_in">len</span>(height)<span class="number">-1</span></span><br><span class="line">    <span class="keyword">var</span> maxArea <span class="keyword">int</span></span><br><span class="line">    <span class="keyword">for</span> i!=j &#123;</span><br><span class="line">        <span class="keyword">var</span> Area <span class="keyword">int</span></span><br><span class="line">        <span class="keyword">if</span>(height[i]&gt;height[j])&#123;</span><br><span class="line">            Area = height[j]*(j-i)</span><br><span class="line">            j--</span><br><span class="line">        &#125;  <span class="keyword">else</span>&#123;</span><br><span class="line">            Area = height[i]*(j-i)</span><br><span class="line">            i++</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(Area&gt;maxArea)&#123;</span><br><span class="line">            maxArea = Area</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxArea</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="暴力求解"><a href="#暴力求解" class="headerlink" title="暴力求解"></a>暴力求解</h2><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//遍历全部解空间 ，找到最优解</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">maxArea</span><span class="params">(height []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> maxArea <span class="keyword">int</span></span><br><span class="line">    <span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;<span class="built_in">len</span>(height)<span class="number">-1</span>;i++&#123;</span><br><span class="line">        <span class="keyword">for</span> j:=i+<span class="number">1</span>;j&lt;<span class="built_in">len</span>(height);j++&#123;</span><br><span class="line">            area:=min(height[i],height[j])*(j<span class="number">-1</span>)</span><br><span class="line">               <span class="keyword">if</span> area&gt;maxArea&#123;</span><br><span class="line">                   maxArea= area</span><br><span class="line">               &#125;     </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxArea</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">min</span><span class="params">( x <span class="keyword">int</span>, y <span class="keyword">int</span>)</span><span class="title">int</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;=y)&#123;</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> y</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
 
 
     </footer>
@@ -195,7 +428,7 @@ var _hmt = _hmt || [];
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="潮汐"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt=""></a>
   </div>
   
   <ul class="nav nav-main">
@@ -205,7 +438,7 @@ var _hmt = _hmt || [];
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98">一题</a>
+      <a class="nav-item-link" href="/tags/LeetCode">一题</a>
     </li>
     
     <li class="nav-item">
@@ -283,7 +516,7 @@ var _hmt = _hmt || [];
 <script>
   try {
     var typed = new Typed("#subtitle", {
-      strings: ['要多吃饭', '', ''],
+      strings: ['要多吃饭，才能好好组织计算过程', '', ''],
       startDelay: 0,
       typeSpeed: 200,
       loop: false,
